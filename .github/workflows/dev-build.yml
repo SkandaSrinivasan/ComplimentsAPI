@@ -14,7 +14,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-      - name: Build and Run Tests
+          distribution: 'adopt'
+      - name: Build and run tests
         uses: gradle/gradle-build-action@v2
         with:
             arguments: test
