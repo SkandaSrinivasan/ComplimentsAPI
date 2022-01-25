@@ -4,6 +4,7 @@ import com.feelgood.complimentsapi.Model.Compliment;
 import com.feelgood.complimentsapi.Repository.ComplimentRepository;
 import com.feelgood.complimentsapi.Service.ComplimentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class ComplimentController {
     @Autowired
     private ComplimentService complimentService;
 
-    @RequestMapping("/random")
+    @GetMapping("/random")
     public Compliment randomCompliment(){
         return complimentService.randomCompliment();
     }
